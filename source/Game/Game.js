@@ -8,8 +8,9 @@ define(
 			},
 
 			runLevel: function(levelName) {
+				var display = this.get('display');
 				require(['Game/levels/' + levelName], function(level) {
-					//console.log(level);
+					display.showLevel(level);
 				});
 			}
 		});
