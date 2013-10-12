@@ -1,0 +1,10 @@
+define(
+	'Sprites',
+	[],
+	function() {
+		return {
+
+		};
+	}
+
+);

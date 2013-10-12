@@ -26,6 +26,8 @@ require.config({
 
 requirejs(['Game/Game'],
     function (Game) {
-        var game = new Game;
+        var game = new Game();
+
+        game.runLevel('DemoLevel');
     }
 );

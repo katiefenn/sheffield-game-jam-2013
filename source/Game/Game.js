@@ -1,10 +1,16 @@
 define(
 	'Game/Game',
-	['underscore', 'backbone'],
-	function (_, Backbone) {
+	['underscore', 'backbone', 'Game/Display'],
+	function (_, Backbone, Display) {
 		var Game = Backbone.Model.extend({
 			initialize: function() {
-				console.log('O HAI');
+				this.set('display', new Display());
+			},
+
+			runLevel: function(levelName) {
+				require(['Game/levels/' + levelName], function(level) {
+					//console.log(level);
+				});
 			}
 		});
 
